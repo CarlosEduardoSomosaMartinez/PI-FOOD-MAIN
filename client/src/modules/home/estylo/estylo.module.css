@@ -1,0 +1,12 @@
+.contendorHome{
+    display: grid;
+    grid-template-columns: 2fr 5.5fr;
+}
+.contenedorSearh{
+ 
+    height: 100%;
+
+}
+.contendorContenido{
+
+}

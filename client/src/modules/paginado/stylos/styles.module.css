@@ -1,0 +1,10 @@
+.lista{
+    list-style: none;
+    display:inline-block;
+    margin:5px;
+    cursor: pointer;
+}
+.contenedor{
+    margin:5px
+}
+

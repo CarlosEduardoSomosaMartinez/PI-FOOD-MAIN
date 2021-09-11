@@ -1,12 +1,19 @@
+require('dotenv').config();
 const axios = require("axios");
+const {
+KEY
+  } = process.env;
+  
 
 async function getNameApi(req){
-    let result=(await axios.get( "https://api.spoonacular.com/recipes/complexSearch?apiKey=5ec8b5e6d0be4b828ccbf63e1e0ffb60&number=100&addRecipeInformation=true")).data.results
+    console.log(KEY)
+    let result=(await axios.get( `https://api.spoonacular.com/recipes/complexSearch?apiKey=${KEY}&number=100&addRecipeInformation=true`)).data.results
     if(req.query.name){
         result =result.filter((el)=>el.title.includes(req.query.name))
     }
     let apires=[];
     for(let i=0;i<result.length;i++){
+      
         apires.push(
             {
             id:result[i].id,
@@ -15,25 +22,29 @@ async function getNameApi(req){
              Puntuacion:result[i].spoonacularScore,
              Nivel:result[i].healthScore,
              Pasos:result[i].analyzedInstructions,
-             Imagen:result[i].image
+             Imagen:result[i].image,
+             Types:result[i].diets
             }
         )
+
+
+
     }
     return  apires;
 }
 
 async function getIdApi(req){
     const {id}=req.params;
-    const result=(await axios.get(`https://api.spoonacular.com/recipes/${id}/information?apiKey=5ec8b5e6d0be4b828ccbf63e1e0ffb60`)).data;
-    
+    const result=(await axios.get(`https://api.spoonacular.com/recipes/${id}/information?apiKey=${KEY}`)).data;
+    console.log(result.diets)
     return{
         id:result.id,
          name:result.title,
          Resumen:result.summary,
          Puntuacion:result.spoonacularScore,
          Nivel:result.healthScore,
-         Pasos:result.analyzedInstructions,
-         Imagen:result.image
+         Imagen:result.image,
+         Types:result.diets
         };
 
 }

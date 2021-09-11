@@ -6,6 +6,7 @@ const router = Router();
 router.post("", async (req, res, next) => {
     try {
       const post = await postRecipe(req);
+      
       if (!post.errors) {
         
          const recipe=(await Recipe.findByPk(post.id));

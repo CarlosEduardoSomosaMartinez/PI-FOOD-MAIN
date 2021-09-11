@@ -1,0 +1,34 @@
+.contenedor{
+    display: flex;
+    margin: 50px;
+}
+.box{
+    width:600px;
+    height:210px;
+    overflow-y: scroll;
+    border-radius:50px;
+
+}
+
+
+.titulo{
+    margin-top: 0;
+    margin-bottom: 0px;
+}
+.imagen{
+    margin-right:50px;
+    width:550px;
+    height:300px;
+    border-radius:50px;
+}
+
+.marco{
+    border:1px solid #000;
+    border-radius: 50px;
+}
+.ajuste{
+    border:1px solid #000;
+    border-radius: 50px;
+    margin-right:50px;
+
+}

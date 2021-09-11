@@ -1,0 +1,24 @@
+ .fondo{
+    background-color:#ff4e80;
+    height:683px;
+}
+
+.home{
+    background-color:#ffa676;
+    margin-top:50px;
+    border:0px;
+    border-radius:20px;
+    padding:10px 60px;
+    font-size:25px;
+    color:#6e2ce2;
+}
+.letras{
+    color:#6e2ce2;
+    font-size:60px;
+    padding-top:150px;
+}
+
+
+.home:hover{
+    background-color:#ffdb7b;
+}

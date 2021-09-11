@@ -4,7 +4,7 @@ const { getNameDb,getByIdDb } = require("../controllers/recipesDb");
 const router = Router();
 
 router.get("", async (req, res, next) => {
-  try {  console.log("mierda")
+  try { 
     const apiRecetas = await getNameApi(req);
     const bdRecetas = await getNameDb(req);
     res.json([...apiRecetas, ...bdRecetas]);

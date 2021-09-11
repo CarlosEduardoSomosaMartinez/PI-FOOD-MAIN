@@ -26,6 +26,11 @@ module.exports = (sequelize) => {
     },
     Pasos:{
       type: DataTypes.STRING,
+    },
+    Imagen:{
+      type: DataTypes.STRING,
     }
+
+
   });
 };

@@ -1,0 +1,23 @@
+.carta{
+    border:1px solid #000;
+    border-radius: 10px;
+    height:170px;
+    display: grid;
+    grid-template-rows:1fr 1fr 1fr 1fr;
+    
+    color: rgb(178, 182, 179);
+}
+.contenedorImg{
+    height:20%;
+}
+.nomargin{
+    margin:5px;
+}
+.paginado{
+    text-align: center;
+}
+.boton{
+    border:1px solid #000;
+    border-radius: 10px;
+
+}
