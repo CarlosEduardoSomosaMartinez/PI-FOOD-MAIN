@@ -18,14 +18,24 @@ const initialState = {
   recipeId:[],
   pasosId:[],
   box:[],
-  result:[]
+  result:[],
+  nanai:""
 };
 const reducer = (state = initialState, action) => {
   console.log(action.type);
   switch (action.type) {
     case GET_RECIPE:
+        if(action.paylod.length===0){
+          return{
+            ...state,
+            nanai:"no hay recetas",
+            recipe: action.paylod,
+            recipeFilter: action.paylod,
+          }
+        }
       return {
         ...state,
+        nanai:"",
         recipe: action.paylod,
         recipeFilter: action.paylod,
       };

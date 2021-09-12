@@ -3,12 +3,13 @@ import { connect } from "react-redux";
 import  stylos from './stylos/stylos.module.css'
 import Paginado from '../paginado/index';
 import RecipeCart from '../recipeCart/index'
-export   function Home({result1}){
+export   function Home({result1,nanai}){
         const [pagina,setPagina]=useState(1)
         const [RecetasPagina,setRecetasPagina]=useState(9)
         const UltimaReceta=pagina*RecetasPagina;
         const PrimeraReceta=UltimaReceta-RecetasPagina;
-        const PaginaActual = result1.slice(PrimeraReceta,UltimaReceta)
+        
+      const PaginaActual = result1.slice(PrimeraReceta,UltimaReceta)
         const paginado =(pageNumber)=>{
                 setPagina(pageNumber)
         }
@@ -20,12 +21,10 @@ export   function Home({result1}){
 
 
     return(
-        
-        <>
-            
+        <> 
         <div className={stylos.ordenContenido}>
             {
-               PaginaActual.map((el,i)=>{return <RecipeCart key={i} name={el.name} imagen={el.Imagen} types={el.Types} Nivel={el.Nivel} id={el.id} pasos={el.Pasos}/>})
+               nanai===""?PaginaActual.map((el,i)=>{return <RecipeCart key={i} name={el.name} imagen={el.Imagen} types={el.Types} Nivel={el.Nivel} id={el.id} pasos={el.Pasos}/>}):<p className={stylos.carga}>{nanai} encontradas</p>
             }
         </div>
             <div >
@@ -40,6 +39,7 @@ export   function Home({result1}){
 const mapStateToProps = (state) => {
     return {
       result1: state.recipeFilter,
+      nanai:state.nanai
     };
   };
   export default connect(mapStateToProps,{})(Home);

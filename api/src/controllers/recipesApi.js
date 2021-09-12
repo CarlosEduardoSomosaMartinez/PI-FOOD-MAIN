@@ -6,7 +6,6 @@ KEY
   
 
 async function getNameApi(req){
-    console.log(KEY)
     let result=(await axios.get( `https://api.spoonacular.com/recipes/complexSearch?apiKey=${KEY}&number=100&addRecipeInformation=true`)).data.results
     if(req.query.name){
         result =result.filter((el)=>el.title.includes(req.query.name))
