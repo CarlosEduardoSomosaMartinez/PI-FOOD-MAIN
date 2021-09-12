@@ -109,9 +109,9 @@ export function Sidebar({
       </form>
       </div>
   
+<div className={stylos.menu}>
 
-
-<p>Dietas</p>
+<h2>Dietas</h2>
       <form className={stylos.cajaDietas}>
         
         {box.map((el,i)=>{
@@ -127,12 +127,13 @@ export function Sidebar({
 
       </form>
 
-<label>Ordenamiento</label>
+<h2>filtros</h2>
       
       <form  className={stylos.ordenamiento}>
         
         <p>
           <input
+          className={stylos.op}
             type="radio"
             onChange={handleChangeRadio}
             name="alfaN"
@@ -177,6 +178,7 @@ export function Sidebar({
           9-0{" "}
         </p>
       </form>
+      </div>
           <div>
               <Link to="/formulario"><button className={stylos.botonAgregar}>Agregar Recetas</button></Link>
           </div>

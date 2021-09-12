@@ -1,11 +1,9 @@
 .carta{
-    border:1px solid #000;
     border-radius: 10px;
     height:170px;
     display: grid;
-    grid-template-rows:1fr 1fr 1fr 1fr;
-    
-    color: rgb(178, 182, 179);
+    grid-template-rows:1fr 5fr 1fr;
+    color: rgba(255, 255, 255, 0);
 }
 .contenedorImg{
     height:20%;
@@ -17,7 +15,31 @@
     text-align: center;
 }
 .boton{
-    border:1px solid #000;
-    border-radius: 10px;
-
+    background-color: rgba(95, 12, 12, 0.479);
+    border-radius:0px 0px 10px 10px;
+    border: none;
+    color:bisque ;
+    text-decoration: none;
+    margin: 0px 0px 0px 0px;
 }
+.renglon{
+    background-color: rgba(95, 12, 12, 0.479);
+    color: bisque;
+    border-radius:10px 10px 0px 0px;
+}
+.reng{
+    margin: 0;
+    text-decoration: none;
+    color: bisque;
+    
+}
+.renglones:hover{
+    background-color: rgba(95, 12, 12, 0.479);
+    color: bisque;
+    border-radius:0px 0px 0px 0px;
+}
+.textno{
+    text-decoration: none;
+}
+
+

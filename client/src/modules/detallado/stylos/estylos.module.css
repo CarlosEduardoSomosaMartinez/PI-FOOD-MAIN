@@ -1,13 +1,17 @@
 .contenedor{
     display: flex;
     margin: 50px;
+    color: bisque;
+    
 }
 .box{
     width:600px;
     height:210px;
     overflow-y: scroll;
     border-radius:50px;
-
+    color: bisque;
+    background-color: rgb(158, 35, 35);
+    text-decoration: none;
 }
 
 
@@ -23,12 +27,26 @@
 }
 
 .marco{
-    border:1px solid #000;
+    background-color: rgb(158, 35, 35);
+   
     border-radius: 50px;
+    color: bisque;
 }
 .ajuste{
-    border:1px solid #000;
+    color: bisque;
+    
     border-radius: 50px;
     margin-right:50px;
+    background-color: rgb(158, 35, 35);
 
 }
+.box2{
+   
+    color:bisque;
+    text-decoration: none;
+}
+.box3{
+     background-color: rgb(158, 35, 35);
+      margin: 0px 655px;
+      border-radius: 10px;
+}  

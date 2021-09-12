@@ -3,29 +3,35 @@
     border: 1px solid #000;
     width: 30%;
     margin:20px 30px 10px 500px;
+    background-color: rgb(158, 35, 35);
+    color: bisque;
     
 }
 .texto{
-    background-color: rgba(255,255,255,0.5);
+    background-color:bisque;
     border-radius: 20px;
-    border: 1px solid #000;
+    border:none;
 }
 .numero{
  border-radius: 20px;
  width: 50px;
- border: 1px solid #000;
+ border: none;
+ background-color:bisque;
 }
 .textArea{
+    background-color:bisque;
     width: 350px;
   height: 150px;
   border-radius: 20px;
-  border: 1px solid #000;
+  border: none;
 
 }
 
 .boton{
+    background-color: rgb(80, 8, 8);
+    color: bisque;
     border-radius: 15px;
-     border:1px solid #000;
+     border:none;
     height: 40px;
     cursor:pointer;
 }

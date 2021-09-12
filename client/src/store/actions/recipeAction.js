@@ -19,11 +19,7 @@ export function post(objeto){
     return axios
       .post("http://localhost:3001/recipe",objeto)
       .then((recite) => {
-        alert("SE FUE A LA VERGA TODO")
-        // return dispatch({
-        //   type: ENVIO,
-        //   paylod: recite.data,
-        // });
+        alert("se completo el registro")
       })
       .catch((error) => {
         alert(error)

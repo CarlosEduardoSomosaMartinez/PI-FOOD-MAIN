@@ -8,18 +8,12 @@ import { deepStrictEqual } from 'assert';
 export  default function Home(){
     return(
         <div className={estylo.contendorHome}>
-           
             <div className={estylo.contenedorSearh}>
                 <SideBar></SideBar>
             </div>
             <div>
                 <Contenido></Contenido>
- 
-            </div>
- 
-        
-            
-            
+            </div>           
         </div >
     )
 }

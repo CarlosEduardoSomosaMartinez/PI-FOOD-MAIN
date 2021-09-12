@@ -16,21 +16,23 @@ export  function CharacterCards({ getIdPasos,name, imagen,types,Nivel,id,pasos})
 
   return (
     <div className={style.carta} style={{backgroundImage:`url(${imagen})`,backgroundPosition: "center",backgroundRepeat: "no-repeat",backgroundSize:"cover"}}>
-      <div>
+      <div className={style.renglon}>
         <p className={style.nomargin}>{name}</p>
       </div>
+      <div className={style.renglones}>
         <p className={style.nomargin}>{Nivel}</p>
       <div>
         {types.map((el,i) => {
           return <label key={i}>{el} </label>;
         })}
+   
       </div>
-      <div>
-      
-        <Link to={`/detalles/${id}`} onClick={handlechange}>
-          <button className={style.boton} >Detalles</button>
-        </Link>
+
       </div>
+      <div className={style.boton}>
+             <Link  className={style.textno}  to={`/detalles/${id}`} onClick={handlechange}>
+          <p className={style.reng} >Detalles</p>
+        </Link></div>
     </div>
   );
 }

@@ -1,24 +1,22 @@
  .fondo{
-    background-color:#ff4e80;
+    background-color:bisque;
     height:683px;
 }
 
 .home{
-    background-color:#ffa676;
+    background-color: rgb(158, 35, 35);
     margin-top:50px;
     border:0px;
     border-radius:20px;
     padding:10px 60px;
     font-size:25px;
-    color:#6e2ce2;
+    color:bisque;
+    cursor: pointer;
 }
 .letras{
-    color:#6e2ce2;
+    color:rgb(158, 35, 35);
     font-size:60px;
     padding-top:150px;
 }
 
 
-.home:hover{
-    background-color:#ffdb7b;
-}

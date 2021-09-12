@@ -74,9 +74,12 @@ export function Detallado({ match, getId, recipeId, pasosId }) {
                
    
       </div>
-      <Link to={`/home`}  >
+      <div className={stylos.box3}>
+               <Link className={stylos.box2} to={`/home`}  >
           <a>Home</a>
         </Link>
+   </div>
+ 
 </>
    
 
